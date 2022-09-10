@@ -42,11 +42,11 @@ const SimpleForm: VFC<Props> = ({ title }) => {
         style = {{color: 'white', fontSize: 'larger', fontWeight: 'bolder'}}
 
         >
-          {printName.sprites.other.home.front_default === undefined ? (
+          {/* {printName.sprites.other.home.front_default === undefined ? (
             <p>No image found</p>
           ) : (
             <img src={printName.sprites.other.home.front_default} />
-          )}
+          )} */}
           <p>
             Height: {printName.height * 10} cm
             <br />
