@@ -47,7 +47,7 @@ const SimpleForm: VFC<Props> = ({ title }) => {
           ) : (
             <img src={printName.sprites.other.home.front_default} />
           )} */}
-          <p id='print-name'>
+          <p data-testid='print-name'>
             Height: {printName.height * 10} cm
             <br />
             Weight: {printName.weight / 10} Kilograms

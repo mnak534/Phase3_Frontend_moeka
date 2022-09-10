@@ -16,10 +16,7 @@ export const Index: ComponentStoryObj<typeof SimpleForm> = {
     })
     userEvent.click(canvas.getByText('🔎'))
 
-    // await waitFor(() =>
-    //   expect(canvas.getByTestId('print-name').textContent).toEqual(
-    //     'Height: 30 cm Weight: 4 Kilograms'
-    //   )
-    // )
+    // await userEvent.type(canvas.getByRole('textbox'), 'ditto');
+    // expect(canvas.getByText('Height: 30 cm')).toBeInTheDocument()
   }
 }
