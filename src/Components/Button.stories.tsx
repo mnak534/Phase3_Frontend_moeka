@@ -1,11 +1,7 @@
 // Button.stories.ts|tsx
-
-import React from 'react';
 import { Meta, Story } from '@storybook/react';
-
+import { within, userEvent } from '@storybook/testing-library';
 import { Button, Props } from './Button';
-import { action } from '@storybook/addon-actions';
-
 
 const meta: Meta = {
   title: 'Button',
@@ -19,9 +15,15 @@ const meta: Meta = {
 }
 
 export default meta;
+
 const Template: Story<Props> = (args) => <Button {...args}/>
 
-export const Default = Template.bind({})
+export const Demo = Template.bind({})
+Demo.play = async ({args, canvasElement}) => {
+  const canvas = within(canvasElement);
+  await userEvent.click(canvas.getByRole('button'));
+  await expect(args.onClick).toHaveBeenCalled();
+}
 
 export const Secondary = Template.bind({})
 

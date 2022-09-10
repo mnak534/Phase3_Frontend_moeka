@@ -23,3 +23,8 @@ export const Button = ({text, link, ...props} :Props) => {
     </button>
   )
 }
+export const Accessible = () => <button>Accessible button</button>;
+
+export const Inaccessible = () => (
+  <button style={{ backgroundColor: 'red', color: 'darkRed' }}>Inaccessible button</button>
+);
