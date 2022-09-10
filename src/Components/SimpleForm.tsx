@@ -1,20 +1,21 @@
 import axios from 'axios'
 import { VFC, useState } from 'react'
+import { Pokemon } from "pokenode-ts";
 
 export type Props = {
   title: string
 }
 
 const SimpleForm: VFC<Props> = ({ title }) => {
-  const [name, setName] = useState('')
-  const [printName, setPrintName] = useState('')
-  const NUMBER_API_URL = "http://numbersapi.com/";
+  const [name, setName] = useState("");
+  const [printName, setPrintName] = useState<undefined | Pokemon>(undefined);
+  const NUMBER_API_URL = "https://pokeapi.co/api/v2";
 
   return (
     <>
       <form
         onSubmit={(event) => {
-          axios.get(NUMBER_API_URL + name).then((res) => {
+          axios.get(NUMBER_API_URL + "/pokemon/" + name).then((res) => {
             setPrintName(res.data);
           });
           event.preventDefault()
@@ -22,7 +23,7 @@ const SimpleForm: VFC<Props> = ({ title }) => {
       >
         <label
         style = {{color: 'white'}}>
-          Number:&nbsp;
+          Pokemon:&nbsp;
           <input
             type="text"
             name="name"
@@ -33,9 +34,27 @@ const SimpleForm: VFC<Props> = ({ title }) => {
           />
         </label>
         <input type="submit" value="🔎"/>
-        <h1 style={{fontSize: 10}}>{' '}</h1>
       </form>
-      <div data-testid="print-name" style = {{fontSize: 20, fontWeight: 'bolder', color: 'white', backgroundColor: 'pink', display: "flex", padding: 15}}>Trivia:&nbsp;{printName}</div>
+      {printName === undefined ? (
+        <p>Pokemon not found</p>
+      ) : (
+        <div id="pokemon-result"
+        style = {{color: 'white', fontSize: 'larger', fontWeight: 'bolder'}}
+
+        >
+          {printName.sprites.other.home.front_default === undefined ? (
+            <p>No image found</p>
+          ) : (
+            <img src={printName.sprites.other.home.front_default} />
+          )}
+          <p>
+            Height: {printName.height * 10} cm
+            <br />
+            Weight: {printName.weight / 10} Kilograms
+          </p>
+        </div>
+      )}
+      {/* <div data-testid="print-name" style = {{fontSize: 20, fontWeight: 'bolder', color: 'white', backgroundColor: 'pink', display: "flex", padding: 15}}>Trivia:&nbsp;{printName}</div> */}
     </>
   )
 }

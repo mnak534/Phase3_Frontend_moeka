@@ -8,7 +8,7 @@ function App() {
   return (
     <div>
       <div className="search-field">
-        <h1>Number Trivias</h1>
+        <h1>Pokédex and Random buttons</h1>
         <Container style = {{padding: 20}}>
           <SimpleForm title={"Number Trivia"}/>
         </Container>
