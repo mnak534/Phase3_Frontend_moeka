@@ -12,7 +12,13 @@ export const Button = ({text, link, ...props} :Props) => {
     border: 'none',
     borderRadius: 100,
     padding: 10,
-    cursor: 'pointer'}}>
+    cursor: 'pointer',
+    color: 'white',
+    fontSize: 'larger',
+    fontWeight: 'bolder',
+    width:'75%',
+    boxShadow: '2px 2px'
+    }}>
       {text}
     </button>
   )

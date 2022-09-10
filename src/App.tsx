@@ -9,10 +9,11 @@ function App() {
     <div>
       <div className="search-field">
         <h1>Number Trivias</h1>
-        <Container>
+        <Container style = {{padding: 20}}>
           <SimpleForm title={"Number Trivia"}/>
         </Container>
-        <BookMarks />
+        <h1 style={{fontSize: 20}}>{'    '}</h1>
+        <BookMarks/>
       </div>
     </div>
   );

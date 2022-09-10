@@ -20,7 +20,8 @@ const SimpleForm: VFC<Props> = ({ title }) => {
           event.preventDefault()
         }}
       >
-        <label>
+        <label
+        style = {{color: 'white'}}>
           Number:&nbsp;
           <input
             type="text"
@@ -31,9 +32,10 @@ const SimpleForm: VFC<Props> = ({ title }) => {
             }}
           />
         </label>
-        <input type="submit" value="Submit" />
+        <input type="submit" value="🔎"/>
+        <h1 style={{fontSize: 10}}>{' '}</h1>
       </form>
-      <div data-testid="print-name" style = {{fontSize: 30, backgroundColor: "rgb(234, 251, 251)", display: "flex", margin: 10, marginTop:10, marginBottom:10}}>Trivia:&nbsp;{printName}</div>
+      <div data-testid="print-name" style = {{fontSize: 20, fontWeight: 'bolder', color: 'white', backgroundColor: 'pink', display: "flex", padding: 15}}>Trivia:&nbsp;{printName}</div>
     </>
   )
 }
