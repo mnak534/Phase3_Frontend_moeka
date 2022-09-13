@@ -23,7 +23,7 @@ export const BookMarks: FunctionComponent = () => {
       { link: "https://www.pokemon.com/us/pokemon-episodes/", text: "Pokémon TV" },
       { link: "https://www.pokemon.com/us/pokemon-video-games/", text: "Pokémon Games" },
       { link: "https://www.pokemon.com/us/pokemon-news/", text: "Pokémon News" },
-      { link: "https://boards.greenhouse.io/pokemoncareers", text: "Career At Pokémon" }
+      { link: "https://boards.greenhouse.io/pokemoncareers", text: "Pokémon Career" }
     ]);
   const items = links.map((link) => {
     return (

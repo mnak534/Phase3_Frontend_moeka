@@ -15,7 +15,7 @@ export const Button = ({text, link, ...props} :Props) => {
     color: 'white',
     fontSize: 'larger',
     fontWeight: 'bolder',
-    width:'75%',
+    width:'70%',
     boxShadow: '2px 2px'
     }}
     >
