@@ -1,5 +1,5 @@
 import { ComponentMeta, ComponentStoryObj } from '@storybook/react'
-import { within, waitFor, userEvent } from '@storybook/testing-library'
+import { within, userEvent } from '@storybook/testing-library'
 import SimpleForm from './SimpleForm'
 
 export default { component: SimpleForm } as ComponentMeta<typeof SimpleForm>
@@ -15,8 +15,5 @@ export const Index: ComponentStoryObj<typeof SimpleForm> = {
       delay: 600
     })
     userEvent.click(canvas.getByText('🔎'))
-
-    // await userEvent.type(canvas.getByRole('textbox'), 'ditto');
-    // expect(canvas.getByText('Height: 30 cm')).toBeInTheDocument()
   }
 }

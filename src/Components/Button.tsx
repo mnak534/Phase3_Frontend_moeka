@@ -1,11 +1,10 @@
-import React, {HTMLAttributes} from 'react'
+import {HTMLAttributes} from 'react'
 
 export interface Props extends HTMLAttributes<HTMLButtonElement> {
   link: string;
   text: string;
 }
 
-/*this is a special button */
 export const Button = ({text, link, ...props} :Props) => {
   return (
     <button {...props} style={{backgroundColor: 'pink',
@@ -18,11 +17,14 @@ export const Button = ({text, link, ...props} :Props) => {
     fontWeight: 'bolder',
     width:'75%',
     boxShadow: '2px 2px'
-    }}>
-      {text}
+    }}
+    >
+      <a href = {link}>{text}</a>
     </button>
   )
 }
+
+//Accessibilities
 export const Accessible = () => <button>Accessible button</button>;
 
 export const Inaccessible = () => (

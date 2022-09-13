@@ -13,6 +13,20 @@ h1 {
   font-size: 300%;
 }
 
+a:link { 
+  text-decoration: none;
+  color: white;
+}
+a:visited { 
+  text-decoration: none; 
+  color: white;
+}
+a:hover { 
+  text-decoration: none; 
+  color:rgb(250, 249, 181);
+}
+a:active { text-decoration: none; }
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -22,6 +36,11 @@ h1 {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.simpleform {
+  color: white;
+  font-weight: bolder;
 }
 
 .App-header {

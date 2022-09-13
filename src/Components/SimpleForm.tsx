@@ -21,8 +21,7 @@ const SimpleForm: VFC<Props> = ({ title }) => {
           event.preventDefault()
         }}
       >
-        <label
-        style = {{color: 'white'}}>
+        <label style = {{color: 'white', fontWeight: 'bolder'}}>
           Pokemon:&nbsp;
           <input
             type="text"
@@ -36,25 +35,23 @@ const SimpleForm: VFC<Props> = ({ title }) => {
         <input type="submit" value="🔎"/>
       </form>
       {printName === undefined ? (
-        <p>Pokemon not found</p>
+        <p style = {{color: 'white', fontWeight: 'bolder'}}>Pokemon not found</p>
       ) : (
         <div id="pokemon-result"
         style = {{color: 'white', fontSize: 'larger', fontWeight: 'bolder'}}
-
         >
-          {/* {printName.sprites.other.home.front_default === undefined ? (
+          {printName.sprites.other === undefined || printName.sprites.other.home.front_default === null ? (
             <p>No image found</p>
           ) : (
             <img src={printName.sprites.other.home.front_default} />
-          )} */}
+          )}
           <p data-testid='print-name'>
             Height: {printName.height * 10} cm
             <br />
-            Weight: {printName.weight / 10} Kilograms
+            Weight: {printName.weight / 10} kg
           </p>
         </div>
       )}
-      {/* <div data-testid="print-name" style = {{fontSize: 20, fontWeight: 'bolder', color: 'white', backgroundColor: 'pink', display: "flex", padding: 15}}>Trivia:&nbsp;{printName}</div> */}
     </>
   )
 }

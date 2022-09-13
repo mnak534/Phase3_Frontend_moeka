@@ -18,11 +18,12 @@ export const BookMarks: FunctionComponent = () => {
   const classes = useStyles();
   const [links, setLinks] = useState(
     [
-      { link: "https:/yahoo.co.jp", text: "Yahoo" },
-      { link: "https://google.co.jp", text: "Google" },
-      { link: "https://www.amazon.co.jp/", text: "Amazon" },
-      { link: "https://qiita.com/", text: "Qiita" },
-      { link: "https://stackoverflow.com/", text: "StackOverflow" },
+      { link: "https://www.pokemon.com/us/", text: "Pokémon Website" },
+      { link: "https://www.pokemon.com/us/pokedex/", text: "Official Pokédex" },
+      { link: "https://www.pokemon.com/us/pokemon-episodes/", text: "Pokémon TV" },
+      { link: "https://www.pokemon.com/us/pokemon-video-games/", text: "Pokémon Games" },
+      { link: "https://www.pokemon.com/us/pokemon-news/", text: "Pokémon News" },
+      { link: "https://boards.greenhouse.io/pokemoncareers", text: "Career At Pokémon" }
     ]);
   const items = links.map((link) => {
     return (
