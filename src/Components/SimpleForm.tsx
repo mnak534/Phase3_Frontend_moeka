@@ -35,17 +35,16 @@ const SimpleForm: VFC<Props> = ({ title }) => {
           />
         </label>
         <input type="submit" value="🔎"/>
-
       </form>
 
       {printName === undefined ? (
         <p style = {{color: 'white', fontWeight: 'bolder'}}>Pokemon not found</p>
       ) : (
-        <div id="pokemon-result"
+        <div
         style = {{color: 'white', fontSize: 'larger', fontWeight: 'bolder', padding: 10}}
         >
           {printName.sprites.other === undefined || printName.sprites.other.home.front_default === null ? (
-            <p></p>
+            <p>Pokemon not found</p>
           ) : (
             <div style = {{display:'flex', justifyContent:'center'}}>
               <Card id = "pokoemon-card">
@@ -58,11 +57,11 @@ const SimpleForm: VFC<Props> = ({ title }) => {
                         <img src={printName.sprites.other.home.front_default} style = {{width: '40%'}}/>
                       </Box>
                       <Grid item>
-                      <p data-testid='print-name'>
+                      <div data-testid='print-name' style={{paddingBottom: 10}}>
                         Height: {printName.height * 10} cm
                       <br />
                         Weight: {printName.weight / 10} kg
-                      </p>
+                      </div>
                       </Grid>
                     </Grid>
                 </Grid>

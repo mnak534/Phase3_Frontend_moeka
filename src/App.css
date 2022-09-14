@@ -13,7 +13,7 @@ h1 {
   font-size: 300%;
 }
 
-a:link { 
+/*a:link { 
   text-decoration: none;
   color: white;
 }
@@ -26,6 +26,7 @@ a:hover {
   color:rgb(245, 244, 154);
 }
 a:active { text-decoration: none; }
+*/
 
 .App-logo {
   height: 40vmin;

@@ -1,4 +1,4 @@
-import {HTMLAttributes} from 'react'
+import {HTMLAttributes, useState} from 'react';
 
 export interface Props extends HTMLAttributes<HTMLButtonElement> {
   link: string;
@@ -6,8 +6,24 @@ export interface Props extends HTMLAttributes<HTMLButtonElement> {
 }
 
 export const Button = ({text, link, ...props} :Props) => {
-  return (
-    <button {...props} style={{backgroundColor: 'pink',
+
+  const [isHover, setIsHover] = useState(false);
+  const [isVisited, setIsVisited] = useState(false);
+
+  const clicked = () => {
+    setIsVisited(true);
+  };
+
+  const hovered = () => {
+    setIsHover(true);
+  };
+
+  const unhovered = () => {
+    setIsHover(false);
+  };
+
+  const buttonStyle = {
+    backgroundColor: isHover? 'rgb(245, 244, 154)': 'pink',
     border: 'none',
     borderRadius: 100,
     padding: 10,
@@ -17,16 +33,21 @@ export const Button = ({text, link, ...props} :Props) => {
     fontWeight: 'bolder',
     width:'70%',
     boxShadow: '2px 2px'
-    }}
+  }
+  
+  return (
+    <button {...props} style={buttonStyle}
+    onMouseDown={clicked}
+    onMouseEnter={hovered}
+    onMouseLeave={unhovered}
+    data-testid='button-test'
     >
-      <a href = {link}>{text}</a>
+      <a 
+      href = {link} 
+      target = "_blank" 
+      style={{textDecoration: 'none', color: 'white'}}
+      data-testid='button-test2'
+      >{text}{isVisited? '(visited)': ''}</a>
     </button>
   )
 }
-
-//Accessibilities
-export const Accessible = () => <button>Accessible button</button>;
-
-export const Inaccessible = () => (
-  <button style={{ backgroundColor: 'red', color: 'darkRed' }}>Inaccessible button</button>
-);
