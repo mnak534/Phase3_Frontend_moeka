@@ -1,3 +1,14 @@
+# MSA 2022 Phase3 - Frontend
+
+A web application that pulls information about Pokemon of user's choice from the external API with responsive buttons that link to external pokemon websites. 
+
+* UI Scalability with window size
+* Mobile first development (using media query breakpoints, etc)
+* Storybook w/ both actions and interactions (play)
+* API connection to your own API that is cloud hosted
+* Comprehensive unit testing
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
