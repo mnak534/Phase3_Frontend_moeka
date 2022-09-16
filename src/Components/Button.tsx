@@ -23,7 +23,7 @@ export const Button = ({text, link, ...props} :Props) => {
   };
 
   const buttonStyle = {
-    backgroundColor: isHover? 'rgb(245, 244, 154)': 'pink',
+    backgroundColor: isHover? 'rgba(255, 0, 0, 0.288)': 'rgb(235, 216, 108)',
     border: 'none',
     borderRadius: 100,
     padding: 10,

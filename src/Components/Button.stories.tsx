@@ -39,8 +39,8 @@ export const testHover: ComponentStoryObj<typeof Button> = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
     await userEvent.click(canvas.getByTestId('button-test'))
-    expect(await canvas.getByTestId('button-test2').textContent).toEqual(
-      'default(visited)'
+    expect(await canvas.getByTestId('button-test2').textContent).toContain(
+      '(visited)'
     )
   }
 }

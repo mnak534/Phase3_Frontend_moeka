@@ -1,16 +1,19 @@
+@import url(https://fonts.googleapis.com/css?family=Luckiest+Guy);
+
 body {
   text-align: center;
-  background-color:rgb(167, 236, 236);
+  background-color:pink;
 }
 
-h1 {
+#title {
+  font-family: "Luckiest Guy";
   justify-content: center;
   display: flex;
-  font-family: Arial;
-  font-weight: bolder;
   text-align: center;
-  color: white;
-  font-size: 300%;
+  font-size: 80px;
+  font-weight: 900;
+  color: yellow;
+  -webkit-text-stroke: 0.1rem rgba(255, 0, 0, 0.288);
 }
 
 /*a:link { 

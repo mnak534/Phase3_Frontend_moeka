@@ -54,7 +54,7 @@ const SimpleForm: VFC<Props> = ({ title }) => {
                   alignItems="center">
                     <Grid item>
                       <Box>
-                        <img src={printName.sprites.other.home.front_default} style = {{width: '40%'}}/>
+                        <img src={printName.sprites.other.home.front_default} style = {{width: '50%'}}/>
                       </Box>
                       <Grid item>
                       <div data-testid='print-name' style={{paddingBottom: 10}}>

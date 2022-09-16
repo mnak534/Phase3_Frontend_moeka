@@ -27,7 +27,7 @@ export const BookMarks: FunctionComponent = () => {
     ]);
   const items = links.map((link) => {
     return (
-      <Grid item xs={12} md={4} className={classes.bookMarks}>
+      <Grid item xs={12} sm={6} md={4} lg={2} className={classes.bookMarks}>
         <Button {...link} />
       </Grid>
     )

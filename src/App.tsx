@@ -9,11 +9,10 @@ function App() {
   return (
     <div>
       <div className="search-field">
-        <h1>Pokémon Searcher</h1>
+        <h2 id="title">Pokédex</h2>
         <Container style = {{padding: 20}}>
           <SimpleForm title={"Pokémon"}/>
         </Container>
-        <h1 style={{fontSize: 20}}>{'    '}</h1>
         <BookMarks/>
       </div>
     </div>
